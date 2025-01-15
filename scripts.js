@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.from("#projects", { scrollTrigger: "#projects", duration: 1, opacity: 0 });
     gsap.from("#contact", { scrollTrigger: "#contact", duration: 1, opacity: 0 });
 
-    // Fetch GitHub Projects
-    fetch("https://api.github.com/users/ayesh-chamodye/repos")
+    // Fetch GitHub Projects dynamically
+    fetch("https://api.github.com/users/ayesh-chamodye/repos?sort=updated")
         .then(response => response.json())
         .then(repos => {
             const projectsList = document.getElementById("projects-list");
@@ -32,5 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
                 projectsList.appendChild(projectCard);
             });
-        });
+        })
+        .catch(error => console.log("Error fetching GitHub projects:", error));
 });
