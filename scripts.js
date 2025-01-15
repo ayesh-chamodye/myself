@@ -1,4 +1,3 @@
-// GSAP Animations
 document.addEventListener("DOMContentLoaded", () => {
     // Preloader
     const preloader = document.getElementById("preloader");
@@ -23,11 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(repos => {
             const projectsList = document.getElementById("projects-list");
             repos.forEach(repo => {
+                // Skip projects with the "hide" keyword in their name or description
                 if (repo.name.toLowerCase().includes("hide") || (repo.description && repo.description.toLowerCase().includes("hide"))) {
-    return; // Skip this project
-}
+                    return; // Skip this project and don't add it to the list
+                }
 
-                
                 const projectCard = document.createElement("div");
                 projectCard.classList.add("project-card");
                 projectCard.innerHTML = `
