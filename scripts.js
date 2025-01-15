@@ -23,6 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(repos => {
             const projectsList = document.getElementById("projects-list");
             repos.forEach(repo => {
+                if (repo.name.toLowerCase().includes("hide") || (repo.description && repo.description.toLowerCase().includes("hide"))) {
+    return; // Skip this project
+}
+
+                
                 const projectCard = document.createElement("div");
                 projectCard.classList.add("project-card");
                 projectCard.innerHTML = `
