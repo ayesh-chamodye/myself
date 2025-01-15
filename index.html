@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ayesh's Portfolio</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -42,11 +40,9 @@
     <section id="projects" class="section-projects">
         <div class="container">
             <h2>Projects</h2>
-            <ul>
-                <li><strong>POS System</strong>: A point-of-sale system developed using C# and .NET for Azure integration.</li>
-                <li><strong>Student Management System</strong>: A web-based system for managing student data.</li>
-                <li><strong>AI Chatbot (Sera)</strong>: An intelligent chatbot designed for better user interaction.</li>
-            </ul>
+            <div id="projects-list">
+                <!-- Projects will be dynamically inserted here -->
+            </div>
         </div>
     </section>
 
@@ -64,6 +60,8 @@
         <p>&copy; 2025 Ayesh. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
