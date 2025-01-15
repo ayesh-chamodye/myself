@@ -1,0 +1,147 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #3f51b5;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+}
+
+/* Home Section */
+.section-home {
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.section-home h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.section-home p {
+    font-size: 1.5rem;
+}
+
+/* About Me Section */
+.section-about {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+.section-about h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-about p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Projects Section */
+.section-projects {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+}
+
+.section-projects h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-projects ul {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-projects ul li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.section-contact {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+.section-contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-contact p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .section-home h1 {
+        font-size: 2rem;
+    }
+
+    .section-home p {
+        font-size: 1.2rem;
+    }
+}
