@@ -1,178 +1,72 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #101010;
-    color: #f5f5f5;
-    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 200vh; /* Increase the height to make scrolling noticeable */
+    perspective: 1000px; /* Add perspective to enable 3D effect */
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Preloader */
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #101010;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loader {
-    border: 8px solid #202020;
-    border-top: 8px solid #ff4081;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Header */
 header {
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    text-align: center;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 10px 0;
     z-index: 10;
 }
 
-header .logo {
-    color: #ff4081;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-left: 20px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #f5f5f5;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ff4081;
-}
-
-/* Sections */
-section {
-    padding: 100px 0;
-    text-align: center;
-}
-
-#home {
-    background: linear-gradient(120deg, #1a1a1a, #202020);
-    color: #f5f5f5;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-#home h1 {
-    font-size: 3rem;
+.profile-img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
     margin-bottom: 10px;
 }
 
-#home p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+h1 {
+    margin: 0;
 }
 
-#home button {
-    padding: 10px 20px;
-    background-color: #ff4081;
+.section {
+    padding: 100px 20px;
+    margin-top: 180px; /* Adjusted to allow space for fixed header */
+    text-align: center;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    opacity: 0; /* Set opacity to 0 initially for animation */
+}
+
+#about {
+    background-color: #3498db;
     color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
 }
 
-#home button:hover {
-    background-color: #e03570;
+#education {
+    background-color: #2ecc71;
 }
 
-/* Projects Section */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+#projects {
+    background-color: #9b59b6;
 }
 
-.projects-grid .project-card {
-    background: #202020;
+#contact {
+    background-color: #f39c12;
+}
+
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+footer a {
+    color: #ecf0f1;
+    text-decoration: none;
 }
 
-.projects-grid .project-card {
-    background: #202020;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.projects-grid .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
-}
-
-
-.projects-grid .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+/* Adding 3D transform style to sections */
+.section {
+    transform-style: preserve-3d;
 }
