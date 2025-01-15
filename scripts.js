@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Skip projects with the "hide" keyword in their name or description
                 if (repo.name.toLowerCase().includes("hide") || (repo.description && repo.description.toLowerCase().includes("hide"))) {
                     return; // Skip this project and don't add it to the list
-                }
+                }else{
 
                 const projectCard = document.createElement("div");
                 projectCard.classList.add("project-card");
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="${repo.html_url}" target="_blank">View Project</a>
                 `;
                 projectsList.appendChild(projectCard);
+            }
             });
         })
         .catch(error => console.log("Error fetching GitHub projects:", error));
